@@ -1,0 +1,297 @@
+:root {
+    --backgroung: #fff;
+    --navBarColor: #b10333;
+    --navBarColorHover: #de003e;
+    --navBarLinkcolor: white;
+    --navBarLinkHoverColor: #69001d;
+    --lateralLinkcolor: #000;
+    --lateralLinkHoverColor: #a1a1a1;
+    --lateralLinkBorderColor: #f3f3f3;
+    --footerBackgroundColor: #294c71;
+    --footerContentColor: #fff;
+    --boxTitleColor: #fff;
+    --boxBackgroundColor: #e4e2e2;
+    --boxBackgroundColor2: #fff;
+    --boxTitleBackgroundColor: #294c71;
+    --inputBackgroundColor: #fff;
+    --inputButtonColor: #fff;
+    --inputButtonBorderColor: #870529;
+    --inputButtonBackgroundColor: #b10333;
+    --imageBorderColor: #dfdfdf;
+    --spotlightBackgroundColor: #b10333;
+    --spotlightColor: #fff;
+    --interviewBackgroundColor: #de003e;
+    --interviewColor: #fff;
+    --newsListBorderColor: #ccc;
+    --newsListTitleColor: #3e7ab9;
+    --newsListHoverBgColor: #eee;
+    --VisitedLinkcolor: #b10333;
+    --hoverLinkcolor: #b10333;
+    --textColor: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Helvetica, Arial, sans-serif;
+    background: var(--backgroung) url(../img/fundo.png) repeat-x;
+}
+
+#container {
+    width: 750px;
+    margin: 0 auto;
+}
+
+#header-content {
+    height: 150px;
+    background: url(../img/detalhe-topo.png) no-repeat right top;
+    padding-top: 25px;
+}
+
+.logo {
+    width: 152px;
+    height: 66px;
+    background: url(../img/logo.png) no-repeat center;
+    text-indent: -30000px;
+}
+
+/* barra de navegação */
+
+a:link, a:visited {
+    color: var(--VisitedLinkcolor);
+    padding: 2px;
+}
+
+a:hover {
+    color: var(--hoverLinkcolor);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-bar ul {
+    margin-top: 30px;
+    background: var(--navBarColor);
+    float: left;
+}
+
+
+.nav-bar ul li {
+    float: left;    
+}
+
+
+.nav-bar ul a {
+    font-size: 0.9em;
+    display: block;
+    padding: 0.5em 1.4em;
+    line-height: 2.1em;
+    text-decoration: none;
+    color: var(--navBarLinkcolor);
+    background: url(../img/divisor.png) no-repeat left center;
+}
+
+.nav-bar ul li:first-child a {
+    background: none;
+}
+
+.nav-bar ul a:hover {
+    color: var(--navBarLinkHoverColor);
+    background: var(--navBarColorHover);
+}
+
+body.home #navigation a#home,
+body.brasil #navigation a#brasil,
+body.internacional #navigation a#internacional,
+body.fotos #navigation a#fotos{
+    color: var(--navBarLinkcolor);
+    background: var(--navBarColorHover);
+    cursor: text;
+}
+
+/* formatar layout 3 colunas */
+
+#content {
+    margin-top: 60px;
+    background: rgb(206, 206, 208);
+}
+
+#primary {
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 195px;
+}
+
+#two-columns #primary {
+    width: 555px;
+}
+
+#one-column #primary {
+    width: 750px;
+    margin: 0 0 20px 0px;
+}
+
+#secondary {
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 15px;
+}
+
+#lateral {
+    width: 180px;
+    float: left;
+    margin: 0 0 20px -750px;
+}
+
+/* caixa */
+
+.cbox {
+    margin: 10px 0;
+    padding: 5px;
+    background: var(--boxBackgroundColor) url(../img/fundo-caixa.png);
+}
+
+.cbox h2 {
+    font-size: 1em;
+    background: var(--boxTitleBackgroundColor);
+    color: var(--boxTitleColor);
+    padding: 5px;
+}
+
+.box-content {
+    background: var(--boxBackgroundColor2);
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* formatação de imagens */
+
+img {
+    border: 2px solid var(--imageBorderColor);
+}
+
+img.principal-image {
+    width: 98%;
+    border: 3px solid var(--imageBorderColor);
+}
+
+img.link-img {
+    width: 80px;
+}
+
+/* Formatação cabeçalhos */
+h3 {
+    text-transform: uppercase;
+    display: inline;
+    font-size: 0.8em;
+    padding: 3px;
+}
+
+.spotlight h3 {
+    background: var(--spotlightBackgroundColor);
+    color: var(--spotlightColor);
+}
+
+.interview h3 {
+    background: var(--interviewBackgroundColor);
+    color: var(--spotlightColor);
+}
+
+/* laterais */
+
+#lateral ul a {
+    font-size: 0.9em;
+    padding: 3px;
+    display: block;
+    line-height: 30px;
+    color: var(--lateralLinkcolor);
+    text-decoration: none;
+    border-bottom: 1px solid var(--lateralLinkBorderColor);
+}
+
+#lateral ul a i{
+    display: none;
+}
+
+#lateral ul a:hover i {
+    color: var(--lateralLinkHoverColor);
+    display: inline;
+}
+
+#lateral ul a:hover {
+    color: var(--lateralLinkHoverColor);
+}
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+    width: 125px;
+    font-size: 0.9em;
+    background-color: var(--inputBackgroundColor);
+}
+
+input.submit {
+    width: 80px;
+    color: var(--inputButtonColor);
+    background-color: var(--inputButtonBackgroundColor);
+    border: 2px solid var(--inputButtonBorderColor);
+    margin-top: 5px;
+}
+
+/* Formatação lista de notícias */
+
+#news-list li {
+    padding: 2px;
+    border-bottom: 1px solid var(--newsListBorderColor);
+    height: 65px;
+}
+
+#news-list li a img {
+    float: left;
+    margin: 5px;
+}
+
+#news-list li a {
+    text-decoration: none;
+}
+
+#news-list li a h3 {
+    font-size: 0.8em;
+    padding: 0;
+    color: var(--newsListTitleColor);
+}
+
+#news-list li a p {
+    font-size: 0.7em;
+    color: var(--textColor);
+}
+
+#news-list li:hover {
+    background: var(--newsListHoverBgColor);
+    cursor: pointer;
+}
+
+/* rodapé */
+
+#footer-container {
+    clear: both;
+    background: var(--footerBackgroundColor);
+    padding: 20px;
+}
+
+#footer-content {
+    width: 750px;
+    margin: 0 auto;
+    color: var(--footerContentColor);
+}
+
